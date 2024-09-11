@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Homepage/home'; // The main component you shared
+import GraphicDesign from './Categories/GraphicDesign/GraphicDesign';
+import Projects from './Categories/Projects/Projects';
+import UXDesigns from './Categories/UxuiDesigns/UxuiDesign';
+import Photography from './Categories/Photography/Photography';
+import Designs3D from './Categories/3dDesign/3dDesign';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/GD" element={<GraphicDesign />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/uxui" element={<UXDesigns />} />
+        <Route path="/photography" element={<Photography />} />
+        <Route path="/3d" element={<Designs3D />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
