@@ -1,0 +1,54 @@
+.my-masonry-grid {
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+    padding-left: 20px; /* Left margin for the grid */
+    padding-right: 20px; /* Right margin for the grid */
+}
+
+.my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+}
+
+.my-masonry-grid_column img {
+    border-radius: 8px;
+}
+
+/* Hover effect for images */
+.hover-effect {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.last-image {
+    margin-bottom: 10px;
+}
+
+/* Style for folder selection buttons */
+.folder-buttons {
+    margin-bottom: 40px; /* Space between buttons and images */
+    position: -webkit-sticky; /* For Safari */
+    position: sticky; 
+    top: 0;  /* Stick to the top */
+    background-color: rgb(11, 19, 37);
+    z-index: 10; /* Ensure it stays above other content */
+    padding: 2rem 0; /* Add some padding to make it stand out */
+}
+
+
+/* Style for the full-screen image display */
+.full-screen-modal img {
+    margin-top: 20px;   /* Vertical margin above the image */
+    margin-bottom: 20px; /* Vertical margin below the image */
+    max-width: 90%;  /* Ensure the image doesn't take up more than 90% width */
+    max-height: 90%; /* Ensure the image doesn't take up more than 90% height */
+}
+
+.fullDiv{
+    background-color: rgb(11, 19, 37);
+}

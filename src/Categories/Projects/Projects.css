@@ -1,0 +1,54 @@
+/* Projects.css */
+.projects-container {
+    margin: 0 auto;
+    background: linear-gradient(125deg, rgb(117, 18, 178)10%, rgb(28, 1, 49)60%);
+  }
+  
+  .big-card {
+    background: linear-gradient(125deg, rgb(163, 97, 248)10%, rgb(115, 18, 189)60%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .left-section {
+    align-items: start;
+  }
+  
+  .right-section img {
+    border-radius: 8px;
+  }
+  
+  
+  .technologies-row img {
+    height: 40px;
+    width: 40px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .technologies-row img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+/* .flex-1{
+  width: 9rem;
+  height: 6rem;
+} */
+.ImgCarousal{
+  border-radius: 0.7rem;
+  background-color: rgb(37, 18, 49);
+}
+.slider-section{
+  height: 5vh;
+}
+  
+
+.techIcons{
+  width: 100%;
+  background-color: rgb(37, 18, 49);
+  padding: 0.6rem 0;
+}
+
+.text-purple{
+  color: rgb(37, 18, 49); 
+}

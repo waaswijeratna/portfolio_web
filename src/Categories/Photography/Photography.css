@@ -1,0 +1,71 @@
+/* Photography.css */
+
+/* General Typography */
+h2 {
+    font-family: 'Arial', sans-serif;
+}
+
+p {
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Left Side Styling */
+.description-box {
+    position: relative;
+    /* Keeps description box at the bottom */
+    bottom: 0;
+    height: 5rem;
+}
+
+/* Adjust flex layout for left and right */
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+/* Quilted Image List Adjustments */
+.quilted-image-list img {
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Improve scrolling for right side */
+.quilted-image-list {
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
+/* Hover Effect on Images */
+.image-hover:hover {
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+/* Green palette styling */
+.bg-green-50 {
+    background-color: #f0fdf4;
+    /* Light green */
+}
+
+.bg-green-100 {
+    background-color: #dcfce7;
+    /* Slightly darker green */
+}
+
+.border-green-400 {
+    border-color: #4ade80;
+    /* Green border color */
+}
+
+
+.content {
+    background-color: #012716;
+}
+
+.text-green{
+    color: #4ade80;
+}
+

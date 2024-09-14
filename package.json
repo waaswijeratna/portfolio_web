@@ -3,19 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "@headlessui/react": "^2.1.5",
     "@heroicons/react": "^2.1.5",
+    "@mui/icons-material": "^6.1.0",
+    "@mui/material": "^6.1.0",
     "@react-three/drei": "^9.112.0",
     "@react-three/fiber": "^8.17.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.20",
+    "axios": "^1.7.7",
     "daisyui": "^4.12.10",
     "postcss": "^8.4.45",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
+    "react-intersection-observer": "^9.13.1",
+    "react-lazy-load-image-component": "^1.6.2",
+    "react-masonry-css": "^1.0.16",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
     "three": "^0.168.0",
@@ -46,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@craco/craco": "^7.1.0",
     "tailwindcss": "^3.4.10"
   }
