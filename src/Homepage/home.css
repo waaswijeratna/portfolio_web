@@ -1,7 +1,72 @@
-.test{
+.test {
     color: rgb(255, 145, 0);
     font-weight: bold;
-}
+  }
+  
+  .contentt {
+    z-index: 10;
+  }
+  
+  .desDiv {
+    padding: 0.5rem 0.5rem;
+    padding-left: 0.4rem;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0.7rem;
+    border: 1.5px solid rgba(122, 122, 122, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .dark {
+    color: white;
+    background: rgba(3, 7, 28, 0.8);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .Swag {
+    width: 100%;
+    z-index: 1;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    height: 90vh;
+  }
+  
+  .blur-background {
+    filter: blur(2px);
+  }
+  
+  .swagButton {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .SwagbtnDiv{
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1.5rem;
+    z-index: 10;
+  }
 
-
+  .toggleOptions{
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
   

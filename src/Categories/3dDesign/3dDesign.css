@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle, #62ffd0, #113a32);
+  overflow: hidden;
+}
+
+.model-viewer {
+  width: 70vw;
+  height: 70vh;
+  margin-bottom: 4rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Sliding the current model out to the right */
+.model-viewer.slide-right-exit {
+  transform: translateX(100vw); /* Slide out to the right */
+}
+
+/* Sliding the current model out to the left */
+.model-viewer.slide-left-exit {
+  transform: translateX(-100vw); /* Slide out to the left */
+}
+
+/* Sliding the new model in from the left */
+.model-viewer.slide-left-enter {
+  transform: translateX(-100vw); /* Start off-screen to the left */
+}
+
+.model-viewer.slide-left-enter-active {
+  transform: translateX(0); /* Slide into the center */
+}
+
+/* Sliding the new model in from the right */
+.model-viewer.slide-right-enter {
+  transform: translateX(100vw); /* Start off-screen to the right */
+}
+
+.model-viewer.slide-right-enter-active {
+  transform: translateX(0); /* Slide into the center */
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnail-title {
+  color: #113a32;
+  text-align: center;
+  font-size: 5vmin;
+  width: 20rem;
+  margin: 0 5rem;
+}
+
+.arrow-button {
+  color: #113a32;
+  font-size: 7vmin;
+}
+
+.info-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 5vmin;
+  color: #b8ffdf;
+}
+
+.tooltip-panel {
+  position: absolute;
+  bottom: -40px;
+  right: -10px;
+  background-color: #113a32;
+  color: #b8ffdf;
+  padding: 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 100;
+}
