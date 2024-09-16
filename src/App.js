@@ -9,6 +9,7 @@ import Designs3D from './Categories/3dDesign/3dDesign';
 
 const App = () => {
   return (
+    <>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/3d" element={<Designs3D />} />
       </Routes>
     </Router>
+    </>
   );
 };
 
