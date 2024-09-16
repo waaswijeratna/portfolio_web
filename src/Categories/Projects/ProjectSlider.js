@@ -17,7 +17,7 @@ const ProjectSlider = ({ projects, selectedProjectIndex, setSelectedProjectIndex
   return (
     <div className="project-slider flex items-center justify-center">
       <IconButton onClick={handlePrevious}>
-        <ArrowBack fontSize="large" />
+        <ArrowBack fontSize="large" className="arrow"/>
       </IconButton>
 
       <div className="cards-container flex space-x-2">
@@ -37,10 +37,15 @@ const ProjectSlider = ({ projects, selectedProjectIndex, setSelectedProjectIndex
       </div>
 
       <IconButton onClick={handleNext}>
-        <ArrowForward fontSize="large" />
+        <ArrowForward fontSize="large" className="arrow"/>
       </IconButton>
     </div>
   );
 };
 
 export default ProjectSlider;
+
+
+
+
+

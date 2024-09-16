@@ -44,6 +44,7 @@
   
 
 .techIcons{
+  overflow: hidden;
   width: 100%;
   background-color: rgb(37, 18, 49);
   padding: 0.6rem 0;
@@ -52,3 +53,63 @@
 .text-purple{
   color: rgb(37, 18, 49); 
 }
+
+
+/* Fade-in and fade-out animations */
+.fade-in {
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+.fade-out {
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+.fade-in_technologies {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+.fade-out_technologies {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+.fade-in_topic {
+  transform: translateX(0);
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+.fade-out_topic {
+  transform: translateX(20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+.fade-in_img {
+  transform: translateX(0);
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+.fade-out_img {
+  transform: translateX(-20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+
+
+/* Other custom styles for the components */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.big-card {
+  position: relative;
+  background-color: white;
+}
+
+.techIcons img {
+  transition: transform 0.3s ease;
+}
+
+.techIcons img:hover {
+  transform: scale(1.1);
+}
+

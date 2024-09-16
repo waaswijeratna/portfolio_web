@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Projects.css';
 import { IconButton } from '@mui/material';
 import { GitHub, Language } from '@mui/icons-material';
 import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Image slider styles
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import ProjectSlider from './ProjectSlider'; // Import the slider component
+
+
 
 const projectData = [
   {
@@ -34,77 +36,121 @@ const projectData = [
     ],
   },
   {
-    name: 'Project Two',
-    description: 'A brief description of project two.',
+    name: 'Automated baby cradle',
+    description: 'This project was my Level 1 hardware project as part of my degree. It was a group project in which we created an automated baby cradle that can be operated remotely. The cradle features automated functions such as swinging based on room temperature, activating a small fan according to the temperature, playing a lullaby when the baby is crying, and sounding a buzzer if the baby is not in the cradle. It also includes a remote monitoring system with a live-streaming camera. My role was to design the PCB and implement the WiFi camera and live streaming app.',
     github: 'https://github.com/waaswijeratna/secondhand.lk',
-    live: 'https://project-one-live.com',
-    logo: '/assets/projects/secondhand.lk/1.png',
+    live: null,
+    logo: '/assets/projects/baby_cradle/1.png',
     images: [
-      '/assets/projects/secondhand.lk/1.png',
-      '/assets/projects/project-two/image2.jpg',
+      '/assets/projects/baby_cradle/1.png',
+      '/assets/projects/baby_cradle/2.jpeg',
+      '/assets/projects/baby_cradle/3.jpeg',
+      '/assets/projects/baby_cradle/4.jpeg',
+      '/assets/projects/baby_cradle/5.jpeg',
+      '/assets/projects/baby_cradle/6.jpeg',
+      '/assets/projects/baby_cradle/7.jpeg',
+      '/assets/projects/baby_cradle/8.jpeg',
+      '/assets/projects/baby_cradle/9.jpeg',
     ],
     technologies: [
-      '/assets/icons/nodejs.svg',
-      '/assets/icons/express.svg',
+      '/assets/projects/technologies/arduino.png',
+      '/assets/projects/technologies/c++.png',
+      '/assets/projects/technologies/react_native.png',
+      '/assets/projects/technologies/easyEDA.png',
     ],
   },
   {
-    name: 'Project Two',
-    description: 'A brief description of project two.',
-    github: 'https://github.com/project-two',
-    live: null,
-    logo: '/assets/projects/secondhand.lk/1.png',
+    name: 'Personal website',
+    description: 'Developed a dynamic and responsive personal website that highlights my portfolio, including projects and achievements. The site is brought to life with interactive 3D models and features a custom-built tracking system that analyzes user interactions, offering valuable insights on content engagement and viewership.',
+    github: 'https://github.com/waaswijeratna/Personal_web',
+    live: 'https://akhila-sanjeewa.netlify.app/',
+    logo: '/assets/projects/personal_web/1.png',
     images: [
-      '/assets/projects/secondhand.lk/1.png',
-      '/assets/projects/project-two/image2.jpg',
+      '/assets/projects/personal_web/1.png',
+      '/assets/projects/personal_web/2.png',
+      '/assets/projects/personal_web/3.png',
+      '/assets/projects/personal_web/4.png',
+      '/assets/projects/personal_web/5.png',
+      '/assets/projects/personal_web/6.png',
     ],
     technologies: [
-      '/assets/icons/nodejs.svg',
-      '/assets/icons/express.svg',
+      'assets/projects/technologies/angular.png',
+      'assets/projects/technologies/html.png',
+      'assets/projects/technologies/css.png',
+      'assets/projects/technologies/tailwind.png',
     ],
   },
   {
-    name: 'Project Two',
-    description: 'A brief description of project two.',
-    github: 'https://github.com/project-two',
-    live: null,
-    logo: '/assets/projects/secondhand.lk/1.png',
+    name: 'Jutsu Kisok',
+    description: 'The project involved developing a dynamic website for an online shop with a unique ninja theme. The design process was particularly challenging, as it required blending the aesthetics of a marketplace with a playful yet sleek ninja-inspired look. I utilized Hostinger for hosting and WordPress as the CMS, incorporating custom HTML and CSS through embedded code to create a highly personalized and responsive design. The website features user-friendly navigation, an engaging layout, and is optimized for both desktop and mobile devices. In addition to the development, I manage the site’s SEO to ensure better visibility on search engines, and I handle analytics to track visitor engagement and improve the site performance. The website is currently live and actively receiving traffic.',
+    github: null,
+    live: 'https://jutsukiosk.com/',
+    logo: '/assets/projects/jutsu_kiosk/1.png',
     images: [
-      '/assets/projects/secondhand.lk/1.png',
-      '/assets/projects/project-two/image2.jpg',
+      '/assets/projects/jutsu_kiosk/1.png',
+      '/assets/projects/jutsu_kiosk/2.png',
+      '/assets/projects/jutsu_kiosk/3.png',
+      '/assets/projects/jutsu_kiosk/4.png',
+      '/assets/projects/jutsu_kiosk/5.png',
+      '/assets/projects/jutsu_kiosk/6.png',
     ],
     technologies: [
-      '/assets/icons/nodejs.svg',
-      '/assets/icons/express.svg',
+      'assets/projects/technologies/hostinger.png',
+      'assets/projects/technologies/wordpress.png',
+      'assets/projects/technologies/html.png',
+      'assets/projects/technologies/css.png',
     ],
   },
-  // Add more projects as needed
-];
+]
 
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const [fadeTitle, setFadeTitle] = useState('fade-in_topic'); // Control title animation
+  const [fadeDescription, setFadeDescription] = useState('fade-in'); // Control description animation
+  const [fadeCarousel, setFadeCarousel] = useState('fade-in_img'); // Control carousel animation
+  const [fadeTechnologies, setFadeTechnologies] = useState('fade-in_technologies'); // Control technologies animation
   const selectedProject = projectData[selectedProjectIndex];
+
+  useEffect(() => {
+    // Apply fade-out animation to elements
+    setFadeTitle('fade-out_topic');
+    setFadeDescription('fade-out');
+    setFadeCarousel('fade-out_img');
+    setFadeTechnologies('fade-out_technologies');
+
+    const timeoutId = setTimeout(() => {
+      setFadeTitle('fade-in_topic');
+      setFadeDescription('fade-in');
+      setFadeCarousel('fade-in_img');
+      setFadeTechnologies('fade-in_technologies');
+    }, 300); 
+
+    return () => clearTimeout(timeoutId);
+  }, [selectedProjectIndex]);
 
   return (
     <div className="projects-container mx-auto pt-6 h-screen">
       {/* Big Project Card */}
       <div className="big-card flex flex-col lg:flex-col shadow-lg rounded-lg p-6 w-[70vw] h-[70vh] mx-auto relative">
-
+        
         {/* Main Content Section */}
         <div className="flex flex-col lg:flex-row h-[80%]">
-
           {/* Left Side */}
           <div className="left-section flex flex-col w-full lg:w-3/5 p-3">
-            <h2 className="text-3xl font-bold text-purple">{selectedProject.name}</h2>
-            <p className="my-2 text-purple text-[2.8vmin] overflow-y-auto">{selectedProject.description}</p>
+            <h2 className={`text-3xl font-bold text-purple ${fadeTitle}`}>{selectedProject.name}</h2>
+            <p className={`my-2 text-purple text-[2.8vmin] overflow-y-auto ${fadeDescription}`}>
+              {selectedProject.description}
+            </p>
 
-            <div className="flex space-x-4">
-              <IconButton href={selectedProject.github} target="_blank" aria-label="GitHub">
-                <GitHub fontSize="large" className="text-purple"/>
-              </IconButton>
+            <div className={`flex space-x-4 ${fadeTitle}`}>
+              {selectedProject.github && (
+                <IconButton href={selectedProject.github} target="_blank" aria-label="GitHub">
+                  <GitHub fontSize="large" className="text-purple" />
+                </IconButton>
+              )}
               {selectedProject.live && (
                 <IconButton href={selectedProject.live} target="_blank" aria-label="Live">
-                  <Language fontSize="large" className="text-purple"/>
+                  <Language fontSize="large" className="text-purple" />
                 </IconButton>
               )}
             </div>
@@ -112,9 +158,8 @@ const Projects = () => {
 
           {/* Right Side */}
           <div className="right-section w-full lg:w-2/5 p-4 flex flex-col justify-center items-center">
-
-            <div className="w-[18rem] h-[12rem] ImgCarousal">
-              <Carousel  showThumbs={false}>
+            <div className={`w-[18rem] h-[12rem] ImgCarousal ${fadeCarousel}`}>
+              <Carousel showThumbs={false}>
                 {selectedProject.images.map((image, index) => (
                   <div key={index}>
                     <img
@@ -126,20 +171,17 @@ const Projects = () => {
                 ))}
               </Carousel>
             </div>
-
-
           </div>
-
         </div>
 
         {/* Technologies Row */}
-        <div className="techIcons absolute bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center space-x-4">
+        <div className="techIcons absolute bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center space-x-4 ">
           {selectedProject.technologies.map((tech, index) => (
             <img
               key={index}
               src={tech}
               alt="Technology"
-              className="h-10 w-10 object-contain"
+              className={`h-10 w-10 object-contain ${fadeTechnologies}`}
             />
           ))}
         </div>
@@ -154,8 +196,6 @@ const Projects = () => {
         />
       </div>
     </div>
-
-
   );
 };
 

@@ -49,14 +49,18 @@
   }
   
   .swagButton {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1.5rem;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10;
   }
   .SwagbtnDiv{
-    width: 50%;
+    width: 15%;
     position: absolute;
     bottom: 0;
     margin-bottom: 1.5rem;
@@ -66,7 +70,11 @@
   .toggleOptions{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-items: center;
     align-items: center;
   }
+  
+
+
   

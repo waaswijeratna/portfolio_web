@@ -120,14 +120,15 @@ const Home = () => {
                 step={100}
                 onChange={handleSliderChange}
                 className="binary-slider"
+                sx={{color: 'green',}}
               />
             </div>
           ) : (
             <div
-              className="mt-4 p-2 bg-blue-500 text-white rounded-full swagButton cursor-pointer"
+              className="mt-4 p-2 bg-blue-900 text-white rounded-full swagButton cursor-pointer"
               onClick={toggleSwagZIndex}
             >
-              {isSwagZIndexHigh ? <FaArrowDown /> : <FaArrowUp />}
+              {isSwagZIndexHigh ? <FaArrowDown className="Icolor"/> : <FaArrowUp className="Icolor"/>}
             </div>
           )}
         </div>
