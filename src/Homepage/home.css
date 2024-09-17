@@ -120,3 +120,210 @@
 .blurL{
   filter: blur(2px);
 }
+
+
+.img-boxL-1 {
+  border: 1vmin solid;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgb(3, 215, 3), rgb(0, 128, 255));
+  background-size: 200% 200%;
+  border-image: linear-gradient(90deg, rgb(3, 215, 3), rgb(0, 128, 255)) 1;
+  border-image-slice: 1;
+  animation: gradient-animation 5s ease infinite;
+}
+
+.img-boxL-4 {
+  border: 1vmin solid;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgb(181, 255, 181), rgb(177, 216, 255));
+  background-size: 200% 200%;
+  border-image: linear-gradient(90deg, rgb(162, 255, 162), rgb(173, 214, 255)) 1;
+  border-image-slice: 1;
+  animation: gradient-animation1 5s ease infinite;
+}
+
+.img-boxL-0 {
+  border: 1vmin solid;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgb(221, 255, 221), rgb(209, 232, 255));
+  background-size: 200% 200%;
+  border-image: linear-gradient(90deg, rgb(220, 255, 220), rgb(209, 232, 255)) 1;
+  border-image-slice: 1;
+  animation: gradient-animation2 5s ease infinite;
+}
+
+.img-boxL-3 {
+  border: 1vmin solid;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgb(221, 255, 221), rgb(209, 232, 255));
+  background-size: 200% 200%;
+  border-image: linear-gradient(90deg, rgb(220, 255, 220), rgb(209, 232, 255)) 1;
+  border-image-slice: 1;
+  animation: gradient-animation2 5s ease infinite;
+}
+
+/* Gradient animation for background and border */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+    border-image: linear-gradient(90deg, rgb(3, 215, 3), rgb(0, 128, 255)) 1;
+  }
+  50% {
+    background-position: 100% 50%;
+    border-image: linear-gradient(90deg, rgb(0, 128, 255), rgb(3, 215, 3)) 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    border-image: linear-gradient(90deg, rgb(3, 215, 3), rgb(0, 128, 255)) 1;
+  }
+}
+
+/* Gradient animation for background and border */
+@keyframes gradient-animation2 {
+  0% {
+    background-position: 0% 50%;
+    border-image: linear-gradient(90deg, rgb(202, 255, 202), rgb(193, 224, 255)) 1;
+  }
+  50% {
+    background-position: 100% 50%;
+    border-image: linear-gradient(90deg, rgb(205, 230, 255), rgb(204, 255, 204)) 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    border-image: linear-gradient(90deg, rgb(192, 255, 192), rgb(200, 228, 255)) 1;
+  }
+}
+
+.img-boxL-2 {
+  border: 1vmin solid;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgb(164, 255, 164), rgb(171, 213, 255));
+  background-size: 200% 200%;
+  border-image: linear-gradient(90deg, #adffad, rgb(156, 205, 255)) 1;
+  border-image-slice: 1;
+  animation: gradient-animation1 5s ease infinite;
+}
+
+/* Gradient animation for background and border */
+@keyframes gradient-animation1 {
+  0% {
+    background-position: 0% 50%;
+    border-image: linear-gradient(90deg, rgb(180, 255, 180), rgb(182, 218, 255)) 1;
+  }
+  50% {
+    background-position: 100% 50%;
+    border-image: linear-gradient(90deg, rgb(143, 199, 255), rgb(168, 255, 168)) 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    border-image: linear-gradient(90deg, rgb(184, 255, 184), rgb(160, 207, 255)) 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+.img-boxD-0 {
+  border: 1vmin solid;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgb(14, 216, 182), rgb(0, 128, 255));
+  background-size: 200% 200%;
+  border-image: linear-gradient(90deg, rgb(3, 215, 166), rgb(0, 128, 255)) 1;
+  border-image-slice: 1;
+  animation: gradient-animation 5s ease infinite;
+}
+
+.img-boxD-4 {
+  border: 1vmin solid;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgb(73, 255, 185), rgb(91, 173, 255));
+  background-size: 200% 200%;
+  border-image: linear-gradient(90deg, rgb(73, 255, 185), rgb(91, 173, 255)) 1;
+  border-image-slice: 1;
+  animation: gradient-animation1 5s ease infinite;
+}
+
+.img-boxD-3 {
+  border: 1vmin solid;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgb(73, 255, 185), rgb(91, 173, 255));
+  background-size: 200% 200%;
+  border-image: linear-gradient(90deg, rgb(73, 255, 185), rgb(91, 173, 255)) 1;
+  border-image-slice: 1;
+  animation: gradient-animation1 5s ease infinite;;
+}
+
+.img-boxD-2 {
+  border: 1vmin solid;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgb(73, 255, 185), rgb(91, 173, 255));
+  background-size: 200% 200%;
+  border-image: linear-gradient(90deg, rgb(73, 255, 185), rgb(91, 173, 255)) 1;
+  border-image-slice: 1;
+  animation: gradient-animation1 5s ease infinite;
+}
+
+.img-boxD-1 {
+  border: 1vmin solid;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgb(164, 255, 244), rgb(171, 213, 255));
+  background-size: 200% 200%;
+  border-image: linear-gradient(90deg, #adffe1, rgb(156, 205, 255)) 1;
+  border-image-slice: 1;
+  animation: gradient-animation2 5s ease infinite;
+}
+
+/* Gradient animation for background and border */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+    border-image: linear-gradient(90deg, rgb(5, 239, 177), rgb(0, 128, 255)) 1;
+  }
+  50% {
+    background-position: 100% 50%;
+    border-image: linear-gradient(90deg, rgb(0, 128, 255), rgb(3, 215, 137)) 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    border-image: linear-gradient(90deg, rgb(3, 215, 162), rgb(0, 128, 255)) 1;
+  }
+}
+
+/* Gradient animation for background and border */
+@keyframes gradient-animation2 {
+  0% {
+    background-position: 0% 50%;
+    border-image: linear-gradient(90deg, rgb(202, 255, 241), rgb(193, 224, 255)) 1;
+  }
+  50% {
+    background-position: 100% 50%;
+    border-image: linear-gradient(90deg, rgb(205, 246, 255), rgb(191, 252, 232)) 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    border-image: linear-gradient(90deg, rgb(185, 255, 227), rgb(200, 228, 255)) 1;
+  }
+}
+
+
+
+/* Gradient animation for background and border */
+@keyframes gradient-animation1 {
+  0% {
+    background-position: 0% 50%;
+    border-image: linear-gradient(90deg, rgb(73, 255, 185), rgb(91, 173, 255)) 1;
+  }
+  50% {
+    background-position: 100% 50%;
+    border-image: linear-gradient(90deg, rgb(91, 173, 255), rgb(73, 255, 185)) 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    border-image: linear-gradient(90deg, rgb(73, 255, 185), rgb(91, 173, 255)) 1;
+  }
+}

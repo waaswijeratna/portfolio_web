@@ -44,7 +44,7 @@ const Home = () => {
                   key={index}
                   src={`/assets/images/${img}.png`}
                   alt={`img-${img}`}
-                  className="w-16 h-16 md:w-24 md:h-24 object-cover rounded-md shadow-l hover:shadow-xl transition-shadow transition-transform hover:scale-105"
+                  className={`${isDarkMode ? `img-boxD-${index}` : `img-boxL-${index}`}  w-16 h-16 md:w-24 md:h-24 object-cover  shadow-l hover:shadow-xl transition-shadow transition-transform hover:scale-105`}
                 />
               </Link>
             ))}
