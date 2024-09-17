@@ -9,6 +9,14 @@
   overflow: hidden;
 }
 
+.spinner-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
 .model-viewer {
   width: 70vw;
   height: 70vh;
@@ -16,32 +24,28 @@
   transition: transform 0.5s ease-in-out;
 }
 
-/* Sliding the current model out to the right */
 .model-viewer.slide-right-exit {
-  transform: translateX(100vw); /* Slide out to the right */
+  transform: translateX(100vw);
 }
 
-/* Sliding the current model out to the left */
 .model-viewer.slide-left-exit {
-  transform: translateX(-100vw); /* Slide out to the left */
+  transform: translateX(-100vw);
 }
 
-/* Sliding the new model in from the left */
 .model-viewer.slide-left-enter {
-  transform: translateX(-100vw); /* Start off-screen to the left */
+  transform: translateX(-100vw);
 }
 
 .model-viewer.slide-left-enter-active {
-  transform: translateX(0); /* Slide into the center */
+  transform: translateX(0);
 }
 
-/* Sliding the new model in from the right */
 .model-viewer.slide-right-enter {
-  transform: translateX(100vw); /* Start off-screen to the right */
+  transform: translateX(100vw);
 }
 
 .model-viewer.slide-right-enter-active {
-  transform: translateX(0); /* Slide into the center */
+  transform: translateX(0);
 }
 
 .thumbnail-container {
@@ -53,32 +57,27 @@
 .thumbnail-title {
   color: #113a32;
   text-align: center;
-  font-size: 5vmin;
-  width: 20rem;
-  margin: 0 5rem;
+  margin: 0 1rem;
+  font-size: 1.5rem;
 }
 
 .arrow-button {
-  color: #113a32;
-  font-size: 7vmin;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .info-icon {
-  background-color: transparent;
-  border: none;
+  font-size: 2rem;
   cursor: pointer;
-  font-size: 5vmin;
-  color: #b8ffdf;
 }
 
 .tooltip-panel {
   position: absolute;
-  bottom: -40px;
-  right: -10px;
-  background-color: #113a32;
-  color: #b8ffdf;
+  background: #f7f7f7;
   padding: 10px;
-  border-radius: 4px;
-  white-space: nowrap;
-  z-index: 100;
+  border-radius: 5px;
+  z-index: 10;
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import axios from 'axios';
 import Masonry from 'react-masonry-css';
 import { FaTimes, FaArrowLeft, FaArrowRight } from 'react-icons/fa'; // For icons
+import ClipLoader from 'react-spinners/ClipLoader';  // Spinner component
 import './GraphicDesign.css';  // Ensure your CSS file is correct
 
 // Define the paths for the images with proper folder names
@@ -171,17 +172,16 @@ const GraphicDesign = () => {
             />
           ))
         ) : (
-          <p>No images found.</p>
+          <div className="flex justify-center items-center w-screen">
+            <ClipLoader color="#36D7B7" loading={loading} size={150} />
+          </div>
         )}
       </Masonry>
-
-      {/* Loading indicator */}
-      {/* {loading && <p className="text-center py-4">Loading more images...</p>} */}
 
       {/* Full Image Modal with Navigation */}
       {fullImageIndex !== null && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 full-screen-modal">
-        <img src={images[fullImageIndex]} alt="Full View" className="max-w-full max-h-full" />
+          <img src={images[fullImageIndex]} alt="Full View" className="max-w-full max-h-full" />
 
           {/* Close Icon */}
           <FaTimes

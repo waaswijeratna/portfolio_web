@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { ClipLoader } from 'react-spinners'; // Spinner import
 import './3dDesign.css';
 import 'tailwindcss/tailwind.css';
 
@@ -14,14 +15,14 @@ const models = [
     { path: '/assets/3d/6/untitled.gltf', title: 'Simple room and angry bird', description: 'A minimalist room featuring a dynamic angry bird figure, ready for action.' }
 ];
 
-
 const ThreedDesign = () => {
     const mountRef = useRef(null);
     const [currentModelIndex, setCurrentModelIndex] = useState(0);
     const [showTooltip, setShowTooltip] = useState(false);
     const [isTransitioning, setIsTransitioning] = useState(false);
-    const [slideDirection, setSlideDirection] = useState(''); // Direction of slide ('left' or 'right')
-    const [isEntering, setIsEntering] = useState(false); // To handle enter animation
+    const [slideDirection, setSlideDirection] = useState('');
+    const [isEntering, setIsEntering] = useState(false);
+    const [loading, setLoading] = useState(true); // Loading state for spinner
 
     useEffect(() => {
         const currentMount = mountRef.current;
@@ -56,6 +57,7 @@ const ThreedDesign = () => {
 
         // Load the model
         const loader = new GLTFLoader();
+        setLoading(true); // Show spinner while loading the model
         loader.load(models[currentModelIndex].path, (gltf) => {
             const model = gltf.scene;
             scene.add(model);
@@ -76,6 +78,7 @@ const ThreedDesign = () => {
             camera.lookAt(new THREE.Vector3(0, 0, 0));
 
             renderer.render(scene, camera);
+            setLoading(false); // Hide spinner after model has loaded
         });
 
         // Orbit controls
@@ -100,24 +103,24 @@ const ThreedDesign = () => {
     }, [currentModelIndex]);
 
     const handleNext = () => {
-        setSlideDirection('right'); // Slide current model out to the right
+        setSlideDirection('right');
         setIsTransitioning(true);
         setTimeout(() => {
             setCurrentModelIndex((prevIndex) => (prevIndex + 1) % models.length);
-            setIsEntering(true); // New model slides in from the left
+            setIsEntering(true);
             setTimeout(() => {
                 setIsTransitioning(false);
                 setIsEntering(false);
             }, 500);
-        }, 500); // Adjust timeout for transition duration
+        }, 500);
     };
 
     const handlePrev = () => {
-        setSlideDirection('left'); // Slide current model out to the left
+        setSlideDirection('left');
         setIsTransitioning(true);
         setTimeout(() => {
             setCurrentModelIndex((prevIndex) => (prevIndex - 1 + models.length) % models.length);
-            setIsEntering(true); // New model slides in from the right
+            setIsEntering(true);
             setTimeout(() => {
                 setIsTransitioning(false);
                 setIsEntering(false);
@@ -131,6 +134,13 @@ const ThreedDesign = () => {
 
     return (
         <div className="container">
+            {/* Display spinner while loading */}
+            {loading && (
+                <div className="spinner-container">
+                    <ClipLoader color="#ffffff" size={50} />
+                </div>
+            )}
+
             <div
                 className={`model-viewer ${isTransitioning ? (slideDirection === 'left' ? 'slide-left-exit' : 'slide-right-exit') : ''} ${isEntering ? (slideDirection === 'left' ? 'slide-left-enter' : 'slide-right-enter') : ''}`}
                 ref={mountRef}
@@ -138,9 +148,7 @@ const ThreedDesign = () => {
 
             <div className="thumbnail-container">
                 <button className="arrow-button" onClick={handlePrev}>⟵</button>
-
                 <span className="thumbnail-title">{models[currentModelIndex].title}</span>
-
                 <button className="arrow-button" onClick={handleNext}>⟶</button>
 
                 <div className="info-icon-container absolute top-5 right-10">

@@ -5,6 +5,9 @@ import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import Binary from './BinaryAnimation';
 import SwagHand from './SwagHand';
 import './home.css';
+import Lottie from 'lottie-react';
+import Bolb from '../lotties/bolbBG.json';
+import NeonCircle from '../lotties/neonCircle.json';
 
 const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -25,7 +28,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className={`flex flex-col md:flex-row min-h-screen p-6 bg-white text-gray-800 ${isSwagZIndexHigh ? 'blur-background' : ''}`}>
+      <div className={` main flex flex-col md:flex-row min-h-screen p-6 bg-white text-gray-800 ${isSwagZIndexHigh ? 'blur-background' : ''}`}>
         {/* Left Side */}
         <div className="md:w-1/2 flex flex-col justify-center items-start space-y-9 text-left p-4 contentt">
           <h1 className="text-8xl font-extrabold desDiv">Portfolio</h1>
@@ -94,9 +97,11 @@ const Home = () => {
             </div>
 
             {/* Go to Personal Website button */}
-            <button className="bg-green-900 text-white py-2 px-4 rounded hover:bg-blue-600">
-              Go to Personal Website
-            </button>
+            <a href="https://akhila-sanjeewa.netlify.app/">
+              <button className="bg-green-900 text-white py-2 px-4 rounded hover:bg-blue-900 transition-colors duration-300">
+                Go to Personal Website
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -106,7 +111,7 @@ const Home = () => {
         <div className="binary">
           {!isDarkMode && <Binary speed={binarySpeed} />}
         </div>
-        <div className={`Swag ${isSwagZIndexHigh ? 'z-10' : 'z-1'}`}>
+        <div className={`Swag ${isSwagZIndexHigh ? 'z-10' : 'z-2'}`}>
           {isDarkMode && <SwagHand />}
         </div>
 
@@ -120,7 +125,7 @@ const Home = () => {
                 step={100}
                 onChange={handleSliderChange}
                 className="binary-slider"
-                sx={{color: 'green',}}
+                sx={{ color: 'green', }}
               />
             </div>
           ) : (
@@ -128,9 +133,25 @@ const Home = () => {
               className="mt-4 p-2 bg-blue-900 text-white rounded-full swagButton cursor-pointer"
               onClick={toggleSwagZIndex}
             >
-              {isSwagZIndexHigh ? <FaArrowDown className="Icolor"/> : <FaArrowUp className="Icolor"/>}
+              {isSwagZIndexHigh ? <FaArrowDown className="Icolor" /> : <FaArrowUp className="Icolor" />}
             </div>
           )}
+        </div>
+        {!isDarkMode &&
+          <iframe src="https://lottie.host/embed/a046a089-0556-4aeb-93d4-d3f020be691c/STH624V56A.json" title="test" className="circuitAni"></iframe>
+        }
+
+        <div className="toBlur">
+        {isDarkMode &&
+          < div className="lottieE">
+            <div className="blobC">
+              <Lottie animationData={Bolb} className={`blobBG  ${isSwagZIndexHigh ? 'blurL' : ''}`}></Lottie>
+            </div>
+            <div className="bgEffect">
+              <Lottie animationData={NeonCircle} className={`Neon ${isSwagZIndexHigh ? 'blurL' : ''}`}></Lottie>
+            </div>
+          </div>
+        }
         </div>
       </div>
 

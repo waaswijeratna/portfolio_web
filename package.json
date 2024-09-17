@@ -17,6 +17,7 @@
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.7",
     "daisyui": "^4.12.10",
+    "lottie-react": "^2.4.0",
     "postcss": "^8.4.45",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -27,7 +28,9 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
+    "react-spinners": "^0.14.1",
     "three": "^0.168.0",
+    "vanta": "^0.5.24",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

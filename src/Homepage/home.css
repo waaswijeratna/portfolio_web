@@ -33,7 +33,7 @@
   
   .Swag {
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     flex-direction: column;
     position: absolute;
     top: 50%;
@@ -46,6 +46,7 @@
   
   .blur-background {
     filter: blur(2px);
+    z-index: 10;
   }
   
   .swagButton {
@@ -77,4 +78,45 @@
   
 
 
-  
+.circuitAni{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+}
+
+.floatingElements{
+  overflow: hidden;
+}
+
+.bgEffect{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 !important;
+  height: 100%;
+  width: 30%;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+
+.blobC {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.blobBG{
+  z-index: 1;
+}
+.neon{
+  z-index: 1;
+}
+
+.blurL{
+  filter: blur(2px);
+}
