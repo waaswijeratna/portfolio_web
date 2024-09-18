@@ -180,7 +180,7 @@ const UxuiDesign = () => {
         </div>
 
         {/* Slider */}
-        <div className={`slider-container absolute bottom-5 right-14 w-[15rem] mr-5 ${carouselOpen ? 'blur' : ''}`}>
+        <div className={`slider-container absolute bottom-5 right-14 w-[15rem] mr-5 z-10 ${carouselOpen ? 'blur' : ''}`}>
           <input
             type="range"
             min="0"
@@ -193,7 +193,7 @@ const UxuiDesign = () => {
 
 
       </div>
-      <Lottie animationData={Stripes} className={`bgAnimation ${carouselOpen ? 'blur hidden' : ''}`}></Lottie>
+        <Lottie animationData={Stripes} className={`bgAnimation ${carouselOpen ? 'blur hidden' : ''}`}></Lottie>
       </>
   );
 };
