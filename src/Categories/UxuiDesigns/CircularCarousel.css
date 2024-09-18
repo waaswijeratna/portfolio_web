@@ -15,7 +15,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #3498db;
+    background:transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +27,7 @@
   }
   
   .center-button.selected {
-    background-color: #2ecc71;
+    background:transparent;
   }
   
   /* Carousel items container */
@@ -51,7 +51,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #f1c40f;
+    background:transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,7 +76,7 @@
     transition: ease-in-out 1s;
   }
   .carousel-item:hover {
-    background-color: #e67e22;
+    background:transparent;
     scale:1.1;
   }
   

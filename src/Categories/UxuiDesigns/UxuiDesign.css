@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.project-images{
+  z-index: 3;
+}
+
 .webView {
   width: 23rem;
   height: 16rem;
@@ -42,3 +46,14 @@ input[type="color"] {
   height: 2rem;
   cursor: pointer;
 }
+
+
+
+.bgAnimation{
+  z-index: 2;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+

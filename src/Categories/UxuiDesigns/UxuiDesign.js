@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './UxuiDesign.css';
 import CircularCarousel from './CircularCarousel';
+import Lottie from 'lottie-react';
+import Stripes from '../../../src/lotties/stripes.json';
 
 const UxuiDesign = () => {
   const projects = [
@@ -8,10 +10,10 @@ const UxuiDesign = () => {
       name: "Secondhand.lk",
       description:
         "This project is a modern classified advertisement platform designed to make buying and selling goods a seamless and refreshing experience. The site features a vibrant blue color palette, chosen specifically to evoke a sense of freshness and trust, highlighting the quality and reliability of the products being listed. User interactions are thoughtfully designed with smooth transitions and sleek animations, ensuring a user-friendly and engaging experience throughout. Stepper integrations guide users effortlessly through key processes such as listing a product, making a purchase, or connecting with a seller, making the overall journey both intuitive and enjoyable.",
-      figmaLink:
-        "https://www.figma.com/design/sYOv3GmtlR2pfgvg1hAVcV/Untitled-(Copy)?node-id=0-1&t=ObCxizb90DYUKm6w-1",
+      figmaLink:"https://www.figma.com/design/ffYaNUvx25kLm6E2to5p8B/Untitled-(Copy)-(Copy)-(Copy)?node-id=0-1&t=sPY6xE72PLMAT8pD-1",
       webViewImage: "assets/uxui/secondhand/view.png",
       thumbnail: "assets/uxui/secondhand/cover.png",
+      mobileViewImage: false,
       images: [
         "assets/uxui/secondhand/2.png",
         "assets/uxui/secondhand/3.png",
@@ -21,18 +23,18 @@ const UxuiDesign = () => {
       ],
     },
     {
-      name: "Project Two",
-      description: "This is the description for Project Two.",
-      figmaLink: "https://www.figma.com/project-two",
-      webViewImage: "",
-      thumbnail: "assets/uxui/secondhand/cover.png",
-      mobileViewImage: "path-to-mobile-view-image2.jpg",
+      name: "Music Memories",
+      description: "This UX design project focuses on creating an immersive music player that enhances the emotional connection between users and their favorite tracks. The app allows users to attach personalized memory notes and images to specific songs, creating a nostalgic experience as they listen. With a clean, dark-themed interface, users can view their memories while playing the song and easily edit or add new notes. The design shown highlights the integration of song details and a memory list, offering a streamlined user interaction for both music playback and memory creation.",
+      figmaLink: "https://www.figma.com/design/JATzmmUxwztpbONflJoIrv/Untitled?node-id=0-1&t=5kY2z15PGf3ojF5J-1",
+      webViewImage: "assets/uxui/music_memories/view.png",
+      thumbnail: "assets/uxui/music_memories/cover.png",
+      mobileViewImage: true,
       images: [
-        "path-to-image6.jpg",
-        "path-to-image7.jpg",
-        "path-to-image8.jpg",
-        "path-to-image9.jpg",
-        "path-to-image10.jpg",
+        "assets/uxui/music_memories/2.png",
+        "assets/uxui/music_memories/3.png",
+        "assets/uxui/music_memories/4.png",
+        "assets/uxui/music_memories/5.png",
+        "assets/uxui/music_memories/6.png",
       ],
     },
   ];
@@ -96,49 +98,50 @@ const UxuiDesign = () => {
   const textColor = calculateTextColor(sliderValue);
 
   return (
-    <div className="uxui-design-wrapper">
-      {/* Blur only the elements except the carousel */}
-      <div
-        className={`uxui-design-container flex ${carouselOpen ? 'blur' : ''}`}
-        style={{ background: backgroundGradient }}
-      >
-        {/* Left side: Project details */}
-        <div className="project-details flex flex-col items-start p-6 w-1/2" style={{ color: textColor }}>
-          <h1 className="text-[7vmin] font-bold mb-2 title">{selectedProject.name}</h1>
-          {selectedProject.webViewImage && (
-            <img src={selectedProject.webViewImage} alt="Web View" className="webView" />
-          )}
-          <p className="Pdescription overflow-y-scroll text-[2.5vmin]">
-            {selectedProject.description}
-          </p>
-          <a
-            href={selectedProject.figmaLink}
-            className="text-blue-500 mt-4"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Figma Design
-          </a>
+    <>
+      <div className="uxui-design-wrapper">
+        {/* Blur only the elements except the carousel */}
+        <div
+          className={`uxui-design-container flex ${carouselOpen ? 'blur' : ''}`}
+          style={{ background: backgroundGradient }}
+        >
+          {/* Left side: Project details */}
+          <div className="project-details flex flex-col items-start p-6 w-1/2" style={{ color: textColor }}>
+            <h1 className="text-[7vmin] font-bold mb-2 title">{selectedProject.name}</h1>
+            {selectedProject.webViewImage && (
+              <img src={selectedProject.webViewImage} alt="Web View" className="webView" />
+            )}
+            <p className="Pdescription overflow-y-scroll text-[2.5vmin]">
+              {selectedProject.description}
+            </p>
+            <a
+              href={selectedProject.figmaLink}
+              className="text-blue-500 mt-4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Figma Design
+            </a>
+          </div>
+
+          {/* Right side: Masonry grid for project images */}
+          <div className="project-images w-1/2 p-2 flex flex-rows gap-14">
+            <div className="flex flex-cols items-end">
+              <img src={selectedProject.images[0]} alt="Noimage" className={`${selectedProject.mobileViewImage ? 'w-[6rem] h-[12rem]' : 'w-[10rem] h-[12rem]'} rounded-lg shadow-lg`} />
+            </div>
+            <div className="imgFlex1 gap-8">
+              <img src={selectedProject.images[1]} alt="Noimage" className={`${selectedProject.mobileViewImage ? 'w-[6rem] h-[12rem]' : 'w-[10rem] h-[12rem]'} rounded-lg shadow-lg`} />
+              <img src={selectedProject.images[2]} alt="Noimage" className={`${selectedProject.mobileViewImage ? 'w-[6rem] h-[12rem]' : 'w-[10rem] h-[12rem]'} rounded-lg shadow-lg`} />
+            </div>
+            <div className="imgFlex2 gap-8">
+              <img src={selectedProject.images[3]} alt="Noimage" className={`${selectedProject.mobileViewImage ? 'w-[6rem] h-[12rem]' : 'w-[10rem] h-[12rem]'} rounded-lg shadow-lg`} />
+              <img src={selectedProject.images[4]} alt="Noimage" className={`${selectedProject.mobileViewImage ? 'w-[6rem] h-[12rem]' : 'w-[10rem] h-[12rem]'} rounded-lg shadow-lg`} />
+            </div>
+          </div>
         </div>
 
-        {/* Right side: Masonry grid for project images */}
-        <div className="project-images w-1/2 p-6 flex flex-rows gap-14">
-          <div className="flex flex-cols items-end">
-            <img src={selectedProject.images[0]} alt="Noimage" className="w-[9rem] h-[10rem] rounded-lg shadow-lg" />
-          </div>
-          <div className="imgFlex1 gap-8">
-            <img src={selectedProject.images[1]} alt="Noimage" className="w-[9rem] h-[10rem] rounded-lg shadow-lg" />
-            <img src={selectedProject.images[2]} alt="Noimage" className="w-[9rem] h-[10rem] rounded-lg shadow-lg" />
-          </div>
-          <div className="imgFlex2 gap-8">
-            <img src={selectedProject.images[3]} alt="Noimage" className="w-[9rem] h-[10rem] rounded-lg shadow-lg" />
-            <img src={selectedProject.images[4]} alt="Noimage" className="w-[9rem] h-[10rem] rounded-lg shadow-lg" />
-          </div>
-        </div>
-      </div>
-
-      {/* Color pickers for gradients and text colors */}
-      <div className={`absolute bottom-[5rem] right-[5rem] flex flex-row gap-3 z-10 ${carouselOpen ? 'blur' : ''}`}>
+        {/* Color pickers for gradients and text colors */}
+        <div className={`absolute bottom-[3rem] right-[5rem] flex flex-row gap-3 z-10 ${carouselOpen ? 'blur' : ''}`}>
           <input
             type="color"
             value={startGradient}
@@ -164,30 +167,34 @@ const UxuiDesign = () => {
             onChange={(e) => setEndTextColor(e.target.value)}
           />
 
-      </div>
+        </div>
 
-      {/* Center: Circular Carousel */}
-      <div className="carousel-wrapper absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <CircularCarousel
-          projects={projects}
-          setSelectedProject={setSelectedProject}
-          selectedProject={selectedProject}
-          setCarouselOpen={setCarouselOpen} // Pass down setCarouselOpen to update the blur
-        />
-      </div>
+        {/* Center: Circular Carousel */}
+        <div className="carousel-wrapper absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+          <CircularCarousel
+            projects={projects}
+            setSelectedProject={setSelectedProject}
+            selectedProject={selectedProject}
+            setCarouselOpen={setCarouselOpen} // Pass down setCarouselOpen to update the blur
+          />
+        </div>
 
-      {/* Slider */}
-      <div className={`slider-container absolute bottom-10 right-14 w-[15rem] mr-5 ${carouselOpen ? 'blur' : ''}`}>
-        <input
-          type="range"
-          min="0"
-          max="100"
-          value={sliderValue}
-          onChange={(e) => setSliderValue(e.target.value)}
-          className="color-slider"
-        />
+        {/* Slider */}
+        <div className={`slider-container absolute bottom-5 right-14 w-[15rem] mr-5 ${carouselOpen ? 'blur' : ''}`}>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value={sliderValue}
+            onChange={(e) => setSliderValue(e.target.value)}
+            className="color-slider"
+          />
+        </div>
+
+
       </div>
-    </div>
+      <Lottie animationData={Stripes} className={`bgAnimation ${carouselOpen ? 'blur hidden' : ''}`}></Lottie>
+      </>
   );
 };
 
