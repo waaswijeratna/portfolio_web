@@ -37,6 +37,21 @@ const UxuiDesign = () => {
         "assets/uxui/music_memories/6.png",
       ],
     },
+    {
+      name: "I Manage Me",
+      description: "This UX design project revolves around a time-boxing app aimed at helping users manage their tasks and time more effectively. Designed with 2024 UI/UX trends in mind, such as neumorphism and gradient aesthetics, the interface provides a seamless experience for both light and dark modes, blending them harmoniously without requiring users to select a specific mode. The color palette features calming green and white tones to create a relaxing ambiance, while various time display styles subtly pressure users to stay on track with their tasks. The design strikes a balance between functionality and aesthetics, ensuring users feel both motivated and at ease while managing their day.",
+      figmaLink: "https://www.figma.com/design/MDbcOS6sYb6w6Xm7YA5Fbv/Untitled-(Copy)?node-id=0-1&t=wdPlVaS7VG9Oqu1X-1",
+      webViewImage: "assets/uxui/IMM/view.png",
+      thumbnail: "assets/uxui/IMM/cover.png",
+      mobileViewImage: true,
+      images: [
+        "assets/uxui/IMM/2.png",
+        "assets/uxui/IMM/3.png",
+        "assets/uxui/IMM/4.png",
+        "assets/uxui/IMM/5.png",
+        "assets/uxui/IMM/6.png",
+      ],
+    },
   ];
 
   const [selectedProject, setSelectedProject] = useState(projects[0]);
