@@ -129,7 +129,7 @@ const Projects = () => {
   }, [selectedProjectIndex]);
 
   return (
-    <div className="projects-container mx-auto pt-6 h-screen">
+    <div className="projects-container mx-auto pt-6 h-[130vh] md:h-screen">
       {/* Big Project Card */}
       <div className="big-card flex flex-col lg:flex-col shadow-lg rounded-lg p-6 w-[70vw] h-[70vh] mx-auto relative">
         
@@ -157,7 +157,7 @@ const Projects = () => {
           </div>
 
           {/* Right Side */}
-          <div className="right-section w-full lg:w-2/5 p-4 flex flex-col justify-center items-center">
+          <div className="right-section w-full mt-[18vh] md:mt-0 lg:w-2/5 md:p-4 flex flex-col justify-center items-center">
             <div className={`w-[18rem] h-[12rem] ImgCarousal ${fadeCarousel}`}>
               <Carousel showThumbs={false}>
                 {selectedProject.images.map((image, index) => (
@@ -188,7 +188,7 @@ const Projects = () => {
       </div>
 
       {/* Slider Section */}
-      <div className="slider-section mt-7">
+      <div className="absolute bottom-[-15vh]  md:relative slider-section md:mt-7">
         <ProjectSlider
           projects={projectData}
           selectedProjectIndex={selectedProjectIndex}
