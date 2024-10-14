@@ -31,24 +31,27 @@ const Home = () => {
       <div className={` main flex flex-col md:flex-row min-h-screen p-6 bg-white text-gray-800 ${isSwagZIndexHigh ? 'blur-background' : ''}`}>
         {/* Left Side */}
         <div className="md:w-1/2 flex flex-col justify-center items-start space-y-9 text-left p-4 contentt">
-          <h1 className="text-8xl font-extrabold desDiv">Portfolio</h1>
+          <h1 className="text-6xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold desDiv">Portfolio</h1>
           <p className="text-lg desDiv">
             Hi, I'm Akhila Sanjeewa. I'm a user of the left brain and a fan of the right brain. Here's a brief look at my work.
           </p>
 
           {/* Image gallery */}
-          <div className="flex space-x-4 mt-">
-            {['GD', 'projects', 'uxui', 'photography', '3d'].map((img, index) => (
-              <Link key={index} to={`/${img}`}>
-                <img
-                  key={index}
-                  src={`/assets/images/${img}.png`}
-                  alt={`img-${img}`}
-                  className={`${isDarkMode ? `img-boxD-${index}` : `img-boxL-${index}`}  w-16 h-16 md:w-24 md:h-24 object-cover  shadow-l hover:shadow-xl transition-shadow transition-transform hover:scale-105`}
-                />
-              </Link>
-            ))}
+          <div className="w-full overflow-x-auto">
+            <div className="flex space-x-1 overflow-x-auto md:overflow-x-visible md:space-x-4 mt-4 min-w-max">
+              {['GD', 'projects', 'uxui', 'photography', '3d'].map((img, index) => (
+                <Link key={index} to={`/${img}`}>
+                  <img
+                    key={index}
+                    src={`/assets/images/${img}.png`}
+                    alt={`img-${img}`}
+                    className={`${isDarkMode ? `img-boxD-${index}` : `img-boxL-${index}`} w-24 h-24 flex-shrink-0 object-cover shadow-l hover:shadow-xl transition-shadow transition-transform hover:scale-105`}
+                  />
+                </Link>
+              ))}
+            </div>
           </div>
+
         </div>
 
         {/* Right Side */}
@@ -108,9 +111,10 @@ const Home = () => {
 
       {/* Conditionally render Binary and Swag components based on isDarkMode */}
       <div>
-        <div className="binary">
+        <div className="binary overflow-x-hidden">
           {!isDarkMode && <Binary speed={binarySpeed} />}
         </div>
+
         <div className={`Swag ${isSwagZIndexHigh ? 'z-10' : 'z-2'}`}>
           {isDarkMode && <SwagHand />}
         </div>
@@ -142,16 +146,16 @@ const Home = () => {
         }
 
         <div className="toBlur">
-        {isDarkMode &&
-          < div className="lottieE">
-            <div className="blobC">
-              <Lottie animationData={Bolb} className={`blobBG  ${isSwagZIndexHigh ? 'blurL' : ''}`}></Lottie>
+          {isDarkMode &&
+            < div className="lottieE">
+              <div className="blobC">
+                <Lottie animationData={Bolb} className={`blobBG  ${isSwagZIndexHigh ? 'blurL' : ''}`}></Lottie>
+              </div>
+              <div className="bgEffect">
+                <Lottie animationData={NeonCircle} className={`Neon ${isSwagZIndexHigh ? 'blurL' : ''}`}></Lottie>
+              </div>
             </div>
-            <div className="bgEffect">
-              <Lottie animationData={NeonCircle} className={`Neon ${isSwagZIndexHigh ? 'blurL' : ''}`}></Lottie>
-            </div>
-          </div>
-        }
+          }
         </div>
       </div>
 

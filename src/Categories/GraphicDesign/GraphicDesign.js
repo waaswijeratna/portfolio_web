@@ -142,7 +142,7 @@ const GraphicDesign = () => {
   return (
     <div className="fullDiv min-h-screen text-white">
       {/* Folder selection buttons */}
-      <div className=" flex justify-center space-x-4 py-6 folder-buttons">
+      <div className=" flex justify-center space-x-4 py-6 folder-buttons overflow-x-auto">
       {imagePaths.map((folder, index) => (
           <button
             key={index}

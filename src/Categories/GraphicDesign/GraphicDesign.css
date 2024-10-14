@@ -30,15 +30,7 @@
 }
 
 /* Style for folder selection buttons */
-.folder-buttons {
-    margin-bottom: 40px; /* Space between buttons and images */
-    position: -webkit-sticky; /* For Safari */
-    position: sticky; 
-    top: 0;  /* Stick to the top */
-    background-color: rgb(11, 19, 37);
-    z-index: 10; /* Ensure it stays above other content */
-    padding: 2rem 0; /* Add some padding to make it stand out */
-}
+
 
 
 /* Style for the full-screen image display */
