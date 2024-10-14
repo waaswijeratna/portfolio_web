@@ -188,7 +188,7 @@ const Projects = () => {
       </div>
 
       {/* Slider Section */}
-      <div className="absolute bottom-[-15vh]  md:relative slider-section md:mt-7">
+      <div className="absolute bottom-[-15vh]  md:relative md:bottom-0 slider-section md:mt-7">
         <ProjectSlider
           projects={projectData}
           selectedProjectIndex={selectedProjectIndex}
