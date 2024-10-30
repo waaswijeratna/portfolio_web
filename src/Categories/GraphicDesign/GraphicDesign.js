@@ -9,10 +9,10 @@ import './GraphicDesign.css';  // Ensure your CSS file is correct
 const imagePaths = [
   { path: '/assets/graphic design/logo/', count: 34, name: 'Logo Designs' },
   { path: '/assets/graphic design/anime/', count: 19, name: 'Anime Style Drawings' },
-  { path: '/assets/graphic design/character/', count: 17, name: 'Character Designs' },
+  { path: '/assets/graphic design/character/', count: 15, name: 'Character Designs' },
   { path: '/assets/graphic design/portrait/', count: 5, name: 'Portrait Arts' },
   { path: '/assets/graphic design/coverdesign/', count: 29, name: 'Albums and Cover Designs' },
-  { path: '/assets/graphic design/other/', count: 24, name: 'Other Designs' },
+  { path: '/assets/graphic design/other/', count: 23, name: 'Other Designs' },
 ];
 
 // Number of images to load per scroll
