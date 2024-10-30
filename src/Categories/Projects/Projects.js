@@ -101,6 +101,27 @@ const projectData = [
       'assets/projects/technologies/css.png',
     ],
   },
+  {
+    name: 'Easy Quick Convert',
+    description: 'The project involved developing a high-speed image compression and file conversion website, offered as a free tool for users. Built with Vue.js, the website features a modern design emphasizing simplicity and usability. The site’s performance is optimized to deliver faster processing speeds compared to similar tools. I incorporated responsive design elements to maintain an experience across desktop and mobile devices. In addition to development, I implemented user-friendly navigation and continually monitor site analytics to improve functionality and engagement. The site is live and gaining traction as a reliable resource for quick, high-quality file conversions and image compression.',
+    github: null,
+    live: 'https://easy-quick-convert.netlify.app/',
+    logo: '/assets/projects/easyQuickConvert/1.png',
+    images: [
+      '/assets/projects/easyQuickConvert/1.png',
+      '/assets/projects/easyQuickConvert/2.png',
+      '/assets/projects/easyQuickConvert/3.png',
+      '/assets/projects/easyQuickConvert/4.png',
+      '/assets/projects/easyQuickConvert/5.png',
+      '/assets/projects/easyQuickConvert/6.png',
+    ],
+    technologies: [
+      'assets/projects/technologies/vue.png',
+      'assets/projects/technologies/tailwind.png',
+      'assets/projects/technologies/html.png',
+      'assets/projects/technologies/css.png',
+    ],
+  },
 ]
 
 const Projects = () => {

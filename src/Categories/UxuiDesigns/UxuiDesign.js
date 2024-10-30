@@ -52,6 +52,21 @@ const UxuiDesign = () => {
         "assets/uxui/IMM/6.png",
       ],
     },
+    {
+      name: "Easy Quick Convert",
+      description: "Leveraging the emerging neumorphism style, I created a visually appealing interface that combines soft, 3D-like elements with modern purple and blue color gradients, representing speed and ease of use. Built with Vue.js, the design emphasizes simplicity, ensuring that users can navigate effortlessly while enjoying a highly responsive experience across all devices. I optimized the site’s layout and interactions to make every step intuitive and engaging for quick file conversions and image compression. The result is a polished, fast-performing tool that’s both functional and visually captivating.",
+      figmaLink: "https://www.figma.com/design/93R6JQPHQkdbiNJ8k99ban/Untitled?t=DWHOlUZALpp6sPqW-1",
+      webViewImage: "assets/uxui/easyQuickConvert/view.png",
+      thumbnail: "assets/uxui/easyQuickConvert/cover.png",
+      mobileViewImage: true,
+      images: [
+        "assets/uxui/easyQuickConvert/2.png",
+        "assets/uxui/easyQuickConvert/3.png",
+        "assets/uxui/easyQuickConvert/4.png",
+        "assets/uxui/easyQuickConvert/5.png",
+        "assets/uxui/easyQuickConvert/6.png",
+      ],
+    },
   ];
 
   const [selectedProject, setSelectedProject] = useState(projects[0]);
