@@ -7,7 +7,7 @@ import './GraphicDesign.css';  // Ensure your CSS file is correct
 
 // Define the paths for the images with proper folder names
 const imagePaths = [
-  { path: '/assets/graphic design/logo/', count: 34, name: 'Logo Designs' },
+  { path: '/assets/graphic design/logo/', count: 32, name: 'Logo Designs' },
   { path: '/assets/graphic design/anime/', count: 19, name: 'Anime Style Drawings' },
   { path: '/assets/graphic design/character/', count: 15, name: 'Character Designs' },
   { path: '/assets/graphic design/portrait/', count: 5, name: 'Portrait Arts' },
