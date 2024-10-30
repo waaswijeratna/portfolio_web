@@ -58,7 +58,7 @@ const UxuiDesign = () => {
       figmaLink: "https://www.figma.com/design/93R6JQPHQkdbiNJ8k99ban/Untitled?t=DWHOlUZALpp6sPqW-1",
       webViewImage: "assets/uxui/easyQuickConvert/view.png",
       thumbnail: "assets/uxui/easyQuickConvert/cover.png",
-      mobileViewImage: true,
+      mobileViewImage: false,
       images: [
         "assets/uxui/easyQuickConvert/2.png",
         "assets/uxui/easyQuickConvert/3.png",
