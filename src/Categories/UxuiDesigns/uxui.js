@@ -37,6 +37,7 @@ const projects = [
   },
 ];
 
+
 const Uxui = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isSliderOpen, setIsSliderOpen] = useState(false);
