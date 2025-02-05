@@ -1,0 +1,90 @@
+.glowing-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    animation: glow 2s infinite alternate;
+    pointer-events: none;
+  }
+  
+  @keyframes glow {
+    from { box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); }
+    to { box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+  }
+  
+  .vertical-slider {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .thumbnail {
+    height: 33.33%;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+    cursor: pointer;
+    padding: 10px;
+    opacity: 0.5;
+  }
+  
+  .thumbnail.active {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .vertical-slider {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30vh;
+      display: flex;
+      overflow-x: auto;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.9);
+    }
+  
+    .thumbnail {
+      width: 33.33%;
+      height: 100%;
+      flex-shrink: 0;
+    }
+  
+    .vertical-slider .thumbnail {
+      transform: none !important;
+    }
+  }
+
+
+
+  
+
+  /* iframe */
+
+  @keyframes borderFlow {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .animate-border-flow {
+    animation: borderFlow 3s ease infinite;
+    background-size: 300% 300%;
+  }
+
+
+
+
+
+
+
+
+
+
+  
